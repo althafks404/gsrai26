@@ -1,0 +1,13 @@
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-icon {
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  opacity: 0.9;
+  flex-shrink: 0;
+}

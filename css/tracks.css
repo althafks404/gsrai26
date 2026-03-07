@@ -1,0 +1,141 @@
+/* CONTAINER – 5 CARDS PER ROW */
+.glass-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  grid-template-rows: repeat(5, auto);   /* 👈 exactly 5 rows */
+  column-gap: 30px;                      /* space between cards horizontally */
+  row-gap: 40px;                         /* 👈 space between rows */
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 32px 24px;
+  min-height: 460px;
+  color: #ffffff;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
+}
+
+/* GLOW ON HOVER */
+.glass-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.25),
+    0 0 40px rgba(99, 102, 241, 0.35),
+    0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* TEXT STYLES */
+.glass-card h4 {
+  font-family: 'Onest', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1.8px;
+  opacity: 0.85;
+  margin-bottom: 10px;
+  color:white;
+}
+
+.glass-card h3 {
+  font-family: 'Onest', sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  color:white;
+}
+
+.glass-card ul {
+  padding-left: 18px;
+  margin-top: 16px;
+}
+
+.glass-card ul li {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  opacity: 0.95;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .glass-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Container: single column */
+  .glass-container {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    padding: 0 12px;
+  }
+
+  /* Card sizing */
+  .glass-card {
+    min-height: auto;          /* remove forced height */
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+
+  /* Track title */
+  .glass-card h4 {
+    font-size: 13px;
+    letter-spacing: 1.4px;
+  }
+
+  /* Main heading */
+  .glass-card h3 {
+    font-size: 16px;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  /* Theme focus text */
+  .glass-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  /* List spacing */
+  .glass-card ul {
+    padding-left: 16px;
+  }
+
+  .glass-card ul li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  /* Reduce hover effects on touch devices */
+  .glass-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+
+  .glass-card {
+    padding: 20px 18px;
+  }
+
+  .glass-card h3 {
+    font-size: 15px;
+  }
+
+  .glass-card ul li {
+    font-size: 13.5px;
+  }
+}

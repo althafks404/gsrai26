@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <defs>
+    <style>
+      .blue { fill: #1e88c9; }
+      .green { fill: #6dbb45; }
+      .darkblue { fill: #0b4f78; }
+      .text1 { font: 700 40px 'Arial', sans-serif; fill: #0b4f78; }
+      .text2 { font: 700 42px 'Arial', sans-serif; fill: #6dbb45; }
+      .text3 { font: 700 36px 'Arial', sans-serif; fill: #1e88c9; }
+    </style>
+  </defs>
+
+  <!-- Circular arrows -->
+  <path d="M450 120a180 180 0 1 1-130 55" fill="none" stroke="#6dbb45" stroke-width="22" stroke-linecap="round"></path>
+  <polygon points="300,170 260,160 275,200" class="green"></polygon>
+
+  <path d="M450 480a180 180 0 1 1 130-55" fill="none" stroke="#6dbb45" stroke-width="22" stroke-linecap="round"></path>
+  <polygon points="600,430 640,440 625,400" class="green"></polygon>
+
+  <!-- Globe -->
+  <circle cx="450" cy="300" r="95" fill="#ffffff" stroke="#1e88c9" stroke-width="10"></circle>
+  <ellipse cx="450" cy="300" rx="75" ry="30" fill="none" stroke="#1e88c9" stroke-width="4"></ellipse>
+  <ellipse cx="450" cy="300" rx="30" ry="75" fill="none" stroke="#1e88c9" stroke-width="4"></ellipse>
+
+  <!-- Leaf -->
+  <path d="M345 270c-40-50-110-40-110-40s10 70 60 90c35 15 70-10 80-30z" class="green"></path>
+  <line x1="340" y1="280" x2="300" y2="330" stroke="#3b7d2a" stroke-width="4"></line>
+
+  <!-- AI circuit -->
+  <path d="M530 240c80 20 100 80 100 80" fill="none" stroke="#1e88c9" stroke-width="4"></path>
+  <circle cx="630" cy="320" r="6" class="blue"></circle>
+  <circle cx="580" cy="260" r="6" class="blue"></circle>
+  <circle cx="560" cy="300" r="6" class="blue"></circle>
+
+  <!-- Text -->
+  <text x="450" y="520" text-anchor="middle" class="text1">
+    Global Conference on
+  </text>
+  <text x="450" y="570" text-anchor="middle" class="text2">
+    Sustainable Research
+  </text>
+  <text x="450" y="620" text-anchor="middle" class="text3">
+    and AI-Driven Innovation
+  </text>
+</svg>
