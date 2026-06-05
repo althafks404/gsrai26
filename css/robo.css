@@ -1,0 +1,367 @@
+/* ==========================================
+   ROBOT COMPETITION SECTION
+========================================== */
+
+.robot-competition-section{
+    padding:100px 0;
+}
+
+.robot-event-card{
+    display:flex;
+    gap:45px;
+    align-items:flex-start;
+
+    background:#ffffff;
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.08);
+
+    overflow:hidden;
+}
+
+/* ==========================================
+   LEFT IMAGE
+========================================== */
+
+.robot-poster{
+    flex:0 0 380px;
+}
+
+.robot-poster img{
+    width:100%;
+    display:block;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.15);
+
+    transition:.4s;
+}
+
+.robot-poster img:hover{
+    transform:scale(1.03);
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.robot-content{
+    flex:1;
+}
+
+.robot-intro{
+    font-size:20px;
+    line-height:1.9;
+    color:#444;
+    margin-bottom:35px;
+}
+
+/* ==========================================
+   INFO BOXES
+========================================== */
+
+.robot-info-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+    margin-bottom:30px;
+}
+
+.info-box{
+    background:#02184f;
+    color:#fff;
+
+    padding:25px 15px;
+    text-align:center;
+
+    border-radius:18px;
+
+    transition:.3s;
+}
+
+.info-box:hover{
+    transform:translateY(-5px);
+}
+
+.info-box h5{
+    color:#ffb400;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.info-box p{
+    color:#ffffff;
+    margin:0;
+    font-size:17px;
+    font-weight:600;
+}
+
+/* ==========================================
+   PRIZE BOX
+========================================== */
+
+.prize-box{
+    background:linear-gradient(
+    135deg,
+    #ffb400,
+    #ff8c00);
+}
+
+.prize-box h5,
+.prize-box p{
+    color:#ffffff;
+}
+
+/* ==========================================
+   ELIGIBILITY
+========================================== */
+
+.eligibility-box{
+    background:#02184f;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    margin-bottom:25px;
+}
+
+.eligibility-box h4{
+    color:#ffb400;
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.eligibility-box ul{
+    margin:0;
+    padding-left:25px;
+}
+
+.eligibility-box li{
+    color:#ffffff;
+    font-size:22px;
+    line-height:1.9;
+    margin-bottom:8px;
+}
+
+/* ==========================================
+   BENEFITS
+========================================== */
+
+.benefits-box{
+    background:#02184f;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    margin-bottom:25px;
+}
+
+.benefits-box h4{
+    color:#ffb400;
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.benefits-box ul{
+    margin:0;
+    padding-left:25px;
+}
+
+.benefits-box li{
+    color:#ffffff;
+    font-size:20px;
+    line-height:1.9;
+    margin-bottom:8px;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.robot-register{
+    margin-top:30px;
+}
+
+.robot-btn{
+    display:inline-block;
+
+    background:linear-gradient(
+    135deg,
+    #ffb400,
+    #ff8c00);
+
+    color:#ffffff;
+    text-decoration:none;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    font-weight:700;
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.robot-btn:hover{
+    color:#ffffff;
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 25px rgba(255,180,0,.35);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .robot-info-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:992px){
+
+    .robot-event-card{
+        flex-direction:column;
+    }
+
+    .robot-poster{
+        flex:100%;
+        width:100%;
+    }
+
+    .robot-poster img{
+        max-width:450px;
+        margin:auto;
+    }
+
+    .robot-info-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:576px){
+
+    .robot-info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .robot-intro{
+        font-size:17px;
+    }
+
+    .eligibility-box h4,
+    .benefits-box h4{
+        font-size:24px;
+    }
+
+    .eligibility-box li,
+    .benefits-box li{
+        font-size:16px;
+    }
+
+}
+
+/* ==========================================
+   LEFT COLUMN
+========================================== */
+
+.robot-poster{
+    flex:0 0 350px;
+}
+
+/* Main Image */
+
+.main-poster{
+    margin-bottom:20px;
+}
+
+.main-poster img{
+    width:100%;
+    border-radius:20px;
+    display:block;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+.robot-gallery{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.gallery-tile{
+    background:#ffffff;
+
+    border-radius:15px;
+    overflow:hidden;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,0.08);
+
+    transition:.3s;
+}
+
+.gallery-tile:hover{
+    transform:translateY(-4px);
+}
+
+.gallery-tile img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    display:block;
+}
+
+.gallery-caption{
+    padding:10px;
+    text-align:center;
+    font-weight:600;
+    color:#08132e;
+    font-size:14px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .robot-poster{
+        width:100%;
+        flex:100%;
+    }
+
+    .robot-gallery{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:15px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .robot-gallery{
+        grid-template-columns:1fr;
+    }
+
+}

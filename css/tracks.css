@@ -1,54 +1,105 @@
-/* CONTAINER – 5 CARDS PER ROW */
+/* ==========================================
+   CONTAINER – 4 CARDS PER ROW
+========================================== */
+
 .glass-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  grid-template-rows: repeat(5, auto);   /* 👈 exactly 5 rows */
-  column-gap: 30px;                      /* space between cards horizontally */
-  row-gap: 40px;                         /* 👈 space between rows */
-  max-width: 1050px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 25px;
+  row-gap: 40px;
+  max-width: 1450px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
-/* GLASS CARD */
+/* ==========================================
+   GLASS CARD
+========================================== */
+
 .glass-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 18px;
+
   padding: 32px 24px;
   min-height: 460px;
+
   color: #ffffff;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
+
+  transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease,
+      border 0.35s ease;
 }
 
-/* GLOW ON HOVER */
+/* ==========================================
+   HOVER EFFECT
+========================================== */
+
 .glass-card:hover {
   transform: translateY(-8px) scale(1.02);
+
   border-color: rgba(99, 102, 241, 0.6);
+
   box-shadow:
     0 0 20px rgba(255, 255, 255, 0.25),
     0 0 40px rgba(99, 102, 241, 0.35),
     0 30px 60px rgba(0, 0, 0, 0.7);
 }
 
-/* TEXT STYLES */
+/* ==========================================
+   TRACK IMAGE
+========================================== */
+
+.track-image {
+  width: 100%;
+  margin-bottom: 25px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.track-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  transition: 0.5s;
+}
+
+.glass-card:hover .track-image img {
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   TEXT STYLES
+========================================== */
+
 .glass-card h4 {
   font-family: 'Onest', sans-serif;
   font-size: 30px;
   letter-spacing: 1.8px;
   opacity: 0.85;
-  margin-bottom: 10px;
-  color:white;
+
+  color: #ffffff;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .glass-card h3 {
   font-family: 'Onest', sans-serif;
   font-size: 19px;
   font-weight: 600;
-  line-height: 1.5;
+
+  color: #ffffff;
+
+  margin-top: 10px;
   margin-bottom: 18px;
-  color:white;
+
+  line-height: 1.5;
 }
 
 .glass-card ul {
@@ -63,50 +114,65 @@
   opacity: 0.95;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1200px) {
+
+  .glass-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
   .glass-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
+
+/* ==========================================
+   MOBILE
+========================================== */
 
 @media (max-width: 768px) {
 
-  /* Container: single column */
   .glass-container {
     grid-template-columns: 1fr;
     row-gap: 24px;
     padding: 0 12px;
   }
 
-  /* Card sizing */
   .glass-card {
-    min-height: auto;          /* remove forced height */
+    min-height: auto;
     padding: 22px 20px;
     border-radius: 16px;
   }
 
-  /* Track title */
   .glass-card h4 {
     font-size: 13px;
     letter-spacing: 1.4px;
   }
 
-  /* Main heading */
   .glass-card h3 {
     font-size: 16px;
     line-height: 1.45;
     margin-bottom: 14px;
   }
 
-  /* Theme focus text */
   .glass-card p {
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 12px;
   }
 
-  /* List spacing */
   .glass-card ul {
     padding-left: 16px;
   }
@@ -117,14 +183,17 @@
     margin-bottom: 8px;
   }
 
-  /* Reduce hover effects on touch devices */
   .glass-card:hover {
     transform: none;
     box-shadow: none;
   }
+
 }
 
-/* EXTRA SMALL DEVICES */
+/* ==========================================
+   EXTRA SMALL DEVICES
+========================================== */
+
 @media (max-width: 480px) {
 
   .glass-card {
@@ -138,4 +207,5 @@
   .glass-card ul li {
     font-size: 13.5px;
   }
+
 }
